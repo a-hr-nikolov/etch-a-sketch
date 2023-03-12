@@ -1,5 +1,5 @@
 const container = document.querySelector('.grid-container');
-const getGridButton = document.querySelector('#getgrid');
+const slider = document.querySelector('#gridsize');
 const gridItem = [];
 
 function changeBoxColor(event) {
@@ -20,17 +20,12 @@ function createGrid(gridSize = 16) {
   }
 }
 
-function clearGrid() {
-  container.innerHTML = '';
-}
-
 function setGrid() {
-  let newGridSize = parseInt(document.querySelector('#gridsize').value);
-  if (!newGridSize) return;
-  if (newGridSize > 100) newGridSize = 100;
-  clearGrid();
+  let newGridSize = parseInt(slider.value);
+  container.innerHTML = '';
   createGrid(newGridSize);
 }
 
 createGrid(16);
-getGridButton.addEventListener('click', setGrid);
+//getGridButton.addEventListener('click', setGrid);
+slider.addEventListener('change', setGrid);
