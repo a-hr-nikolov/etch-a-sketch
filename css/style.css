@@ -15,13 +15,11 @@ body {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
-  /* width: 800px;
-  height: 800px; */
   background-color: white;
+  border-radius: 3px;
 }
 
 .grid-item {
-  background: pink;
   margin: 0;
   padding: 0;
   border: 1px solid black;

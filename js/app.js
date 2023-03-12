@@ -3,7 +3,31 @@ const getGridButton = document.querySelector('#getgrid');
 const gridItem = [];
 
 function changeBoxColor(event) {
-  event.target.style.background = 'black';
+  if (!event.target.style.background) {
+    event.target.setAttribute(
+      'data-hsl',
+      `${Math.floor(Math.random() * 360)}, ${Math.floor(
+        Math.random() * 101
+      )}%, ${Math.floor(Math.random() * 101)}%`
+    );
+    let itemColor = event.target
+      .getAttribute('data-hsl')
+      .match(/\d+/g)
+      .map(item => +item);
+    event.target.style.background = `hsl(${itemColor[0]}, ${itemColor[1]}%, ${itemColor[2]}%)`;
+  } else {
+    let itemColor = event.target
+      .getAttribute('data-hsl')
+      .match(/\d+/g)
+      .map(item => +item);
+    if (itemColor[2] > 10) itemColor[2] = itemColor[2] - 10;
+    else itemColor[2] = 0;
+    event.target.style.background = `hsl(${itemColor[0]}, ${itemColor[1]}%, ${itemColor[2]}%)`;
+    event.target.setAttribute(
+      'data-hsl',
+      `${itemColor[0]}, ${itemColor[1]}%, ${itemColor[2]}%`
+    );
+  }
 }
 
 function createGrid(gridSize = 16) {
