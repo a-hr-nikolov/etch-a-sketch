@@ -1,4 +1,5 @@
 const container = document.querySelector('.grid-container');
+//const getGridButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
 const gridItem = [];
 
@@ -29,3 +30,8 @@ function setGrid() {
 createGrid(16);
 //getGridButton.addEventListener('click', setGrid);
 slider.addEventListener('change', setGrid);
+
+// TODO
+// Event Listener on click. Color picker for single color.
+// Rainbow color picker.
+// https://bscottnz.github.io/esketch/
