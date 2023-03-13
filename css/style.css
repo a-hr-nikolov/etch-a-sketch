@@ -10,6 +10,7 @@ body {
   background: darkslategray;
   height: 100svh;
   margin: 0;
+  gap: 8px;
 }
 
 .grid-container {
@@ -24,4 +25,32 @@ body {
   padding: 0;
   border: 1px solid black;
   box-sizing: border-box;
+}
+
+button {
+  background: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 2px;
+  height: 3rem;
+  width: 3rem;
+  color: darkslategray;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 0 6px pink;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 233, 233);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+button > * {
+  pointer-events: none;
 }

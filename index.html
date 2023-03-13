@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/app.js" defer></script>
   </head>
   <body>
     <div class="grid-input">
       <input type="range" min="1" max="100" value="16" id="gridsize" />
-      <!-- <button id="cleargrid">PUT REFRESH ICON HERE</button> -->
+      <button id="cleargrid"><i class="fa-solid fa-rotate-right"></i></button>
     </div>
     <div class="grid-container" style="width: 800px; height: 800px"></div>
   </body>

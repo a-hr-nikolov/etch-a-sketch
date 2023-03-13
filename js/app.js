@@ -1,5 +1,5 @@
 const container = document.querySelector('.grid-container');
-//const getGridButton = document.querySelector('#cleargrid');
+const getClearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
 const gridItem = [];
 
@@ -28,7 +28,7 @@ function setGrid() {
 }
 
 createGrid(16);
-//getGridButton.addEventListener('click', setGrid);
+getClearButton.addEventListener('click', setGrid);
 slider.addEventListener('change', setGrid);
 
 // TODO
