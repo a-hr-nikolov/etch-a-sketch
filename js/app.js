@@ -24,9 +24,6 @@ function toggleAction() {
   actionToggle = !actionToggle;
 }
 
-window.addEventListener('mousedown', toggleAction);
-window.addEventListener('mouseup', toggleAction);
-
 function createGrid(gridSize = 16) {
   let gridItemSize = parseFloat(container.style.width) / gridSize;
   for (let i = 0; i < gridSize ** 2; i++) {
@@ -37,19 +34,24 @@ function createGrid(gridSize = 16) {
     container.appendChild(gridItem[i]);
     gridItem[i].addEventListener('mousedown', changeBoxColorClick);
     gridItem[i].addEventListener('mouseover', changeBoxColor);
-    gridItem[i].addEventListener('mouseout', () => (actionToggle = false));
   }
 }
+
+window.addEventListener('mousedown', toggleAction);
+window.addEventListener('mouseup', toggleAction);
 
 function setGrid() {
   let newGridSize = parseInt(slider.value);
   container.innerHTML = '';
+  document.querySelector(
+    '#grid-size-text'
+  ).innerText = `${newGridSize}x${newGridSize}`;
   createGrid(newGridSize);
 }
 
 createGrid(16);
 getClearButton.addEventListener('click', setGrid);
-slider.addEventListener('change', setGrid);
+slider.addEventListener('input', setGrid);
 
 // TODO
 // Event Listener on click. Color picker for single color.

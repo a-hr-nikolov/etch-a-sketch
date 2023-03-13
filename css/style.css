@@ -54,3 +54,8 @@ button:active {
 button > * {
   pointer-events: none;
 }
+
+#grid-size-text {
+  color: white;
+  font-family: Roboto;
+}
