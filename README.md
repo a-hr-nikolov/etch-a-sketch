@@ -11,3 +11,7 @@ The most challenging aspect is figuring out the logic around making an RGB etch-
 3. Add an eraser.
 4. Add clear button.
 5. Stylize the project.
+
+## Challenges I've faced
+
+1. I cannot seem to make a grid item change color only when the mouse is down and over the grid item. I know that my logic works in pseudo code, it should work in the browser to, and sometimes it does. But it's 50-50, sometimes the browser does the exact opposite. I checked if my logic is correct with some other people, and they agree everything should be working. But it isn't.
