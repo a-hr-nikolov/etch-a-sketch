@@ -14,3 +14,4 @@ There a few other challenging aspects, which are not part of the main assignment
 4. Add clear button.
 5. Stylize the project.
 6. Add a color picker as well.
+7. Fix the borders to be displayed correctly (0.5px or 1px)
