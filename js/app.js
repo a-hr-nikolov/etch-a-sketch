@@ -5,7 +5,7 @@ const gridItem = [];
 let actionToggle = false;
 
 function changeBoxColor(event) {
-  if (actionToggle) {
+  if (event.buttons > 0) {
     event.target.style.background = `rgb(${Math.floor(
       Math.random() * 256
     )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
@@ -33,7 +33,7 @@ function createGrid(gridSize = 16) {
     gridItem[i].style.height = `${gridItemSize}px`;
     container.appendChild(gridItem[i]);
     gridItem[i].addEventListener('mousedown', changeBoxColorClick);
-    gridItem[i].addEventListener('mouseover', changeBoxColor);
+    gridItem[i].addEventListener('mouseenter', changeBoxColor);
   }
 }
 
