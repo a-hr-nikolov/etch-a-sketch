@@ -20,7 +20,9 @@ function changeBoxColorClick(event) {
 }
 
 function createGrid(gridSize = 16) {
-  let gridItemSize = parseFloat(container.style.width) / gridSize;
+  let gridItemSize =
+    parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
+    gridSize;
   for (let i = 0; i < gridSize ** 2; i++) {
     gridItem[i] = document.createElement('div');
     gridItem[i].classList.add('grid-item');

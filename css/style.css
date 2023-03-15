@@ -20,6 +20,8 @@ body {
   border-radius: 3px;
   box-sizing: content-box;
   border: 0.5px solid white;
+  width: 800px;
+  height: 800px;
 }
 
 .grid-item {
