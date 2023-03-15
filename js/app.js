@@ -2,7 +2,6 @@ const container = document.querySelector('.grid-container');
 const getClearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
 const gridItem = [];
-let actionToggle = false;
 
 function changeBoxColor(event) {
   if (event.buttons > 0) {
@@ -20,10 +19,6 @@ function changeBoxColorClick(event) {
   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
-function toggleAction() {
-  actionToggle = !actionToggle;
-}
-
 function createGrid(gridSize = 16) {
   let gridItemSize = parseFloat(container.style.width) / gridSize;
   for (let i = 0; i < gridSize ** 2; i++) {
@@ -36,9 +31,6 @@ function createGrid(gridSize = 16) {
     gridItem[i].addEventListener('mouseenter', changeBoxColor);
   }
 }
-
-window.addEventListener('mousedown', toggleAction);
-window.addEventListener('mouseup', toggleAction);
 
 function setGrid() {
   let newGridSize = parseInt(slider.value);
