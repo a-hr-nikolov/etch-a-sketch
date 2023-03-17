@@ -1,7 +1,10 @@
 const container = document.querySelector('.grid-container');
-const getClearButton = document.querySelector('#cleargrid');
+const clearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
+const blackAndWhiteButton = document.querySelector('#bnw');
+const rgbButton = document.querySelector('#rgb');
 const gridItem = [];
+let modeSelector = 'rgb';
 
 function changeBoxColor(event) {
   if (event.buttons > 0) {
@@ -29,6 +32,12 @@ function changeToBlackClick(event) {
   event.target.style.background = 'black';
 }
 
+function setMode(event) {
+  modeSelector = event.target.getAttribute('id');
+}
+
+function modeRouter(event) {}
+
 function createGrid(gridSize = 16) {
   let gridItemSize =
     parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
@@ -54,8 +63,10 @@ function setGrid() {
 }
 
 createGrid(16);
-getClearButton.addEventListener('click', setGrid);
+clearButton.addEventListener('click', setGrid);
 slider.addEventListener('input', setGrid);
+blackAndWhiteButton.addEventListener('click', setMode);
+rgbButton.addEventListener('click', setMode);
 
 // TODO
 // Event Listener on click. Color picker for single color.
