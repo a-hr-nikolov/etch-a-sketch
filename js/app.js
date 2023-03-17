@@ -47,6 +47,17 @@ function modeRouter(event) {
   }
 }
 
+function modeRouterClick(event) {
+  switch (modeSelector) {
+    case 'rgb':
+      changeBoxColorClick(event);
+      break;
+    case 'bnw':
+      changeToBlackClick(event);
+      break;
+  }
+}
+
 function createGrid(gridSize = 16) {
   let gridItemSize =
     parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
@@ -57,7 +68,7 @@ function createGrid(gridSize = 16) {
     gridItem[i].style.width = `${gridItemSize}px`;
     gridItem[i].style.height = `${gridItemSize}px`;
     container.appendChild(gridItem[i]);
-    gridItem[i].addEventListener('mousedown', changeBoxColorClick);
+    gridItem[i].addEventListener('mousedown', modeRouterClick);
     gridItem[i].addEventListener('mouseenter', modeRouter);
   }
 }
