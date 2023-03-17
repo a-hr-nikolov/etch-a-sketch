@@ -13,6 +13,13 @@ body {
   gap: 8px;
 }
 
+.grid-input {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  gap: 5px;
+}
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -63,12 +70,6 @@ button > * {
 #grid-size-text {
   color: white;
   font-family: Roboto;
-}
-
-#rgb,
-#bnw {
-  box-sizing: border-box;
-  padding: 5px;
 }
 
 .paint {
