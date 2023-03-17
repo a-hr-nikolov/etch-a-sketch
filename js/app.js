@@ -36,7 +36,16 @@ function setMode(event) {
   modeSelector = event.target.getAttribute('id');
 }
 
-function modeRouter(event) {}
+function modeRouter(event) {
+  switch (modeSelector) {
+    case 'rgb':
+      changeBoxColor(event);
+      break;
+    case 'bnw':
+      changeToBlack(event);
+      break;
+  }
+}
 
 function createGrid(gridSize = 16) {
   let gridItemSize =
@@ -49,7 +58,7 @@ function createGrid(gridSize = 16) {
     gridItem[i].style.height = `${gridItemSize}px`;
     container.appendChild(gridItem[i]);
     gridItem[i].addEventListener('mousedown', changeBoxColorClick);
-    gridItem[i].addEventListener('mouseenter', changeBoxColor);
+    gridItem[i].addEventListener('mouseenter', modeRouter);
   }
 }
 
