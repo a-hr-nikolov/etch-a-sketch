@@ -19,6 +19,16 @@ function changeBoxColorClick(event) {
   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
+function changeToBlack(event) {
+  if (event.buttons > 0) {
+    event.target.style.background = 'black';
+  }
+}
+
+function changeToBlackClick(event) {
+  event.target.style.background = 'black';
+}
+
 function createGrid(gridSize = 16) {
   let gridItemSize =
     parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
