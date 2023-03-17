@@ -11,7 +11,6 @@ There a few other challenging aspects, which are not part of the main assignment
 1. Add a black&white vs rgb mode switcher.
 2. Add a single color mode.
 3. Add an eraser.
-4. Add clear button.
-5. Stylize the project.
-6. Add a color picker as well.
-7. Fix the borders to be displayed correctly (0.5px or 1px)
+4. Stylize the project.
+5. Add a color picker as well.
+6. Fix the borders to be displayed correctly (0.5px or 1px)
