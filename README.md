@@ -12,4 +12,9 @@ There a few other challenging aspects, which are not part of the main assignment
 2. Add an eraser.
 3. Stylize the project.
 4. ~~Add a color picker as well.~~
-5. ~~Fix the borders to be displayed correctly (0.5px or 1px)~~
+5. ~~Fix the borders to be displayed correctly~~
+6. Find a solution for grid size edge cases (sometimes they don't divide evenly and a 1-2px white space appears on-screen).
+7. Stylize the color picker input field somehow.
+8. Add comments to the JS file.
+9. Refactor CSS wherever possible.
+10. Refactor JS - separate functions in other files to not clutter the main file.
