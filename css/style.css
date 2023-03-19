@@ -29,6 +29,8 @@ body {
   box-sizing: content-box;
   width: 800px;
   height: 800px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .grid-item {
