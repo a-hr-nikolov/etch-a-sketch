@@ -23,26 +23,29 @@ body {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-sizing: content-box;
   width: 800px;
   height: 800px;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .grid-item {
   margin: 0;
   padding: 0;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
   box-sizing: border-box;
   user-select: none;
 }
 
-button {
+button,
+#color-input {
   box-sizing: border-box;
   background: white;
   border: 2px solid white;
@@ -57,12 +60,14 @@ button {
   box-shadow: 0 6px pink;
 }
 
-button:hover {
+button:hover,
+#color-input:hover {
   cursor: pointer;
   background-color: rgb(255, 233, 233);
 }
 
-button:active {
+button:active,
+#color-input:active {
   box-shadow: none;
   transform: translateY(6px);
 }
@@ -100,4 +105,8 @@ button > * {
     rgba(251, 7, 217, 1) 90%,
     rgba(255, 0, 0, 1) 100%
   );
+}
+
+#color-input {
+  content: '<i class="fa-solid fa-paintbrush"></i>';
 }
