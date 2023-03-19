@@ -8,8 +8,8 @@ There a few other challenging aspects, which are not part of the main assignment
 
 ## To Do:
 
-1. Add a single color mode.
+1. ~~Add a single color mode.~~
 2. Add an eraser.
 3. Stylize the project.
-4. Add a color picker as well.
-5. Fix the borders to be displayed correctly (0.5px or 1px)
+4. ~~Add a color picker as well.~~
+5. ~~Fix the borders to be displayed correctly (0.5px or 1px)~~
