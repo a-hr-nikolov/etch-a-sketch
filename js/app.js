@@ -3,6 +3,7 @@ const clearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
 const blackAndWhiteButton = document.querySelector('#bnw');
 const rgbButton = document.querySelector('#rgb');
+const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
 let modeSelector = 'rgb';
 
@@ -32,6 +33,16 @@ function changeToBlackClick(event) {
   event.target.style.background = 'black';
 }
 
+function changeToPickedColor(event) {
+  if (event.buttons > 0) {
+    event.target.style.background = `${colorPicker.value}`;
+  }
+}
+
+function changeToPickedColorClick(event) {
+  event.target.style.background = `${colorPicker.value}`;
+}
+
 function setMode(event) {
   modeSelector = event.target.getAttribute('id');
 }
@@ -44,6 +55,9 @@ function modeRouter(event) {
     case 'bnw':
       changeToBlack(event);
       break;
+    case 'color-input':
+      changeToPickedColor(event);
+      break;
   }
 }
 
@@ -54,6 +68,9 @@ function modeRouterClick(event) {
       break;
     case 'bnw':
       changeToBlackClick(event);
+      break;
+    case 'color-input':
+      changeToPickedColorClick(event);
       break;
   }
 }
