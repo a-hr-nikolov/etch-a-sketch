@@ -106,7 +106,3 @@ button > * {
     rgba(255, 0, 0, 1) 100%
   );
 }
-
-#color-input {
-  content: '<i class="fa-solid fa-paintbrush"></i>';
-}

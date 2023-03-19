@@ -104,6 +104,7 @@ clearButton.addEventListener('click', setGrid);
 slider.addEventListener('input', setGrid);
 blackAndWhiteButton.addEventListener('click', setMode);
 rgbButton.addEventListener('click', setMode);
+colorPicker.addEventListener('click', setMode);
 
 // TODO
 // Event Listener on click. Color picker for single color.
