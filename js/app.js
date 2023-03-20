@@ -3,7 +3,7 @@ import paintRainbow from './paintRainbow.js';
 const container = document.querySelector('.grid-container');
 const clearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
-const blackAndWhiteButton = document.querySelector('#bnw');
+const blackButton = document.querySelector('#black');
 const rgbButton = document.querySelector('#rgb');
 const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
@@ -30,7 +30,7 @@ function modeRouter(event) {
     case 'rgb':
       paintRainbow(event);
       break;
-    case 'bnw':
+    case 'black':
       paintBlack(event);
       break;
     case 'color-input':
@@ -66,7 +66,7 @@ function setGrid() {
 createGrid(16);
 clearButton.addEventListener('click', setGrid);
 slider.addEventListener('input', setGrid);
-blackAndWhiteButton.addEventListener('click', setMode);
+blackButton.addEventListener('click', setMode);
 rgbButton.addEventListener('click', setMode);
 colorPicker.addEventListener('click', setMode);
 
