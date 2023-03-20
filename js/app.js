@@ -1,3 +1,5 @@
+import { paintRainbow, paintRainbowClick } from './paintRainbow.js';
+
 const container = document.querySelector('.grid-container');
 const clearButton = document.querySelector('#cleargrid');
 const slider = document.querySelector('#gridsize');
@@ -7,21 +9,21 @@ const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
 let modeSelector = 'rgb';
 
-function paintRainbow(event) {
-  if (event.buttons > 0) {
-    event.target.style.background = `rgb(${Math.floor(
-      Math.random() * 256
-    )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
-      Math.random() * 256
-    )})`;
-  }
-}
+// function paintRainbow(event) {
+//   if (event.buttons > 0) {
+//     event.target.style.background = `rgb(${Math.floor(
+//       Math.random() * 256
+//     )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
+//       Math.random() * 256
+//     )})`;
+//   }
+// }
 
-function paintRainbowClick(event) {
-  event.target.style.background = `rgb(${Math.floor(
-    Math.random() * 256
-  )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-}
+// function paintRainbowClick(event) {
+//   event.target.style.background = `rgb(${Math.floor(
+//     Math.random() * 256
+//   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+// }
 
 function paintBlack(event) {
   if (event.buttons > 0) {
