@@ -90,7 +90,7 @@ button > * {
   background-color: black;
 }
 
-.rgb {
+.rainbow {
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,

@@ -1,20 +1,21 @@
-import paintRainbow from './paintRainbow.js';
-import paintBlack from './paintBlack.js';
+import { paintRainbow, paintBlack, paintSingleColor } from './paints.js';
 
 const container = document.querySelector('.grid-container');
-const clearButton = document.querySelector('#cleargrid');
+
 const slider = document.querySelector('#gridsize');
-const blackButton = document.querySelector('#black');
-const rgbButton = document.querySelector('#rgb');
+
 const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
-let modeSelector = 'rgb';
+let modeSelector = 'rainbow';
 
-function paintPickedColor(event) {
-  if (event.buttons > 0) {
-    event.target.style.background = `${colorPicker.value}`;
-  }
-}
+const rainbowButton = document.querySelector('#rainbow');
+rainbowButton.addEventListener('click', setMode);
+
+const blackButton = document.querySelector('#black');
+blackButton.addEventListener('click', setMode);
+
+const clearButton = document.querySelector('#cleargrid');
+clearButton.addEventListener('click', setGrid);
 
 function setMode(event) {
   modeSelector = event.target.getAttribute('id');
@@ -22,14 +23,14 @@ function setMode(event) {
 
 function modeRouter(event) {
   switch (modeSelector) {
-    case 'rgb':
+    case 'rainbow':
       paintRainbow(event);
       break;
     case 'black':
       paintBlack(event);
       break;
     case 'color-input':
-      paintPickedColor(event);
+      paintSingleColor(event);
       break;
   }
 }
@@ -59,10 +60,9 @@ function setGrid() {
 }
 
 createGrid(16);
-clearButton.addEventListener('click', setGrid);
+
 slider.addEventListener('input', setGrid);
-blackButton.addEventListener('click', setMode);
-rgbButton.addEventListener('click', setMode);
+
 colorPicker.addEventListener('click', setMode);
 
 // TODO
