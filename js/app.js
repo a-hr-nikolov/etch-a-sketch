@@ -7,7 +7,7 @@ const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
 let modeSelector = 'rgb';
 
-function changeBoxColor(event) {
+function paintRainbow(event) {
   if (event.buttons > 0) {
     event.target.style.background = `rgb(${Math.floor(
       Math.random() * 256
@@ -17,29 +17,29 @@ function changeBoxColor(event) {
   }
 }
 
-function changeBoxColorClick(event) {
+function paintRainbowClick(event) {
   event.target.style.background = `rgb(${Math.floor(
     Math.random() * 256
   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
-function changeToBlack(event) {
+function paintBlack(event) {
   if (event.buttons > 0) {
     event.target.style.background = 'black';
   }
 }
 
-function changeToBlackClick(event) {
+function paintBlackClick(event) {
   event.target.style.background = 'black';
 }
 
-function changeToPickedColor(event) {
+function paintPickedColor(event) {
   if (event.buttons > 0) {
     event.target.style.background = `${colorPicker.value}`;
   }
 }
 
-function changeToPickedColorClick(event) {
+function paintPickedColorClick(event) {
   event.target.style.background = `${colorPicker.value}`;
 }
 
@@ -50,13 +50,13 @@ function setMode(event) {
 function modeRouter(event) {
   switch (modeSelector) {
     case 'rgb':
-      changeBoxColor(event);
+      paintRainbow(event);
       break;
     case 'bnw':
-      changeToBlack(event);
+      paintBlack(event);
       break;
     case 'color-input':
-      changeToPickedColor(event);
+      paintPickedColor(event);
       break;
   }
 }
@@ -64,13 +64,13 @@ function modeRouter(event) {
 function modeRouterClick(event) {
   switch (modeSelector) {
     case 'rgb':
-      changeBoxColorClick(event);
+      paintRainbowClick(event);
       break;
     case 'bnw':
-      changeToBlackClick(event);
+      paintBlackClick(event);
       break;
     case 'color-input':
-      changeToPickedColorClick(event);
+      paintPickedColorClick(event);
       break;
   }
 }
