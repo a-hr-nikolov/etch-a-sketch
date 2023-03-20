@@ -1,4 +1,4 @@
-import { paintRainbow, paintRainbowClick } from './paintRainbow.js';
+import paintRainbow from './paintRainbow.js';
 
 const container = document.querySelector('.grid-container');
 const clearButton = document.querySelector('#cleargrid');
@@ -8,22 +8,6 @@ const rgbButton = document.querySelector('#rgb');
 const colorPicker = document.querySelector('#color-input');
 const gridItem = [];
 let modeSelector = 'rgb';
-
-// function paintRainbow(event) {
-//   if (event.buttons > 0) {
-//     event.target.style.background = `rgb(${Math.floor(
-//       Math.random() * 256
-//     )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
-//       Math.random() * 256
-//     )})`;
-//   }
-// }
-
-// function paintRainbowClick(event) {
-//   event.target.style.background = `rgb(${Math.floor(
-//     Math.random() * 256
-//   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-// }
 
 function paintBlack(event) {
   if (event.buttons > 0) {
@@ -63,19 +47,19 @@ function modeRouter(event) {
   }
 }
 
-function modeRouterClick(event) {
-  switch (modeSelector) {
-    case 'rgb':
-      paintRainbowClick(event);
-      break;
-    case 'bnw':
-      paintBlackClick(event);
-      break;
-    case 'color-input':
-      paintPickedColorClick(event);
-      break;
-  }
-}
+// function modeRouterClick(event) {
+//   switch (modeSelector) {
+//     case 'rgb':
+//       paintRainbowClick(event);
+//       break;
+//     case 'bnw':
+//       paintBlackClick(event);
+//       break;
+//     case 'color-input':
+//       paintPickedColorClick(event);
+//       break;
+//   }
+// }
 
 function createGrid(gridSize = 16) {
   let gridItemSize =
@@ -87,7 +71,7 @@ function createGrid(gridSize = 16) {
     gridItem[i].style.width = `${gridItemSize}px`;
     gridItem[i].style.height = `${gridItemSize}px`;
     container.appendChild(gridItem[i]);
-    gridItem[i].addEventListener('mousedown', modeRouterClick);
+    gridItem[i].addEventListener('mousedown', modeRouter);
     gridItem[i].addEventListener('mouseenter', modeRouter);
   }
 }
