@@ -15,18 +15,10 @@ function paintBlack(event) {
   }
 }
 
-function paintBlackClick(event) {
-  event.target.style.background = 'black';
-}
-
 function paintPickedColor(event) {
   if (event.buttons > 0) {
     event.target.style.background = `${colorPicker.value}`;
   }
-}
-
-function paintPickedColorClick(event) {
-  event.target.style.background = `${colorPicker.value}`;
 }
 
 function setMode(event) {
@@ -46,20 +38,6 @@ function modeRouter(event) {
       break;
   }
 }
-
-// function modeRouterClick(event) {
-//   switch (modeSelector) {
-//     case 'rgb':
-//       paintRainbowClick(event);
-//       break;
-//     case 'bnw':
-//       paintBlackClick(event);
-//       break;
-//     case 'color-input':
-//       paintPickedColorClick(event);
-//       break;
-//   }
-// }
 
 function createGrid(gridSize = 16) {
   let gridItemSize =
@@ -93,6 +71,4 @@ rgbButton.addEventListener('click', setMode);
 colorPicker.addEventListener('click', setMode);
 
 // TODO
-// Event Listener on click. Color picker for single color.
-// Rainbow color picker.
 // https://bscottnz.github.io/esketch/
