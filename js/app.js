@@ -8,40 +8,42 @@ const rainbowButton = document.querySelector('#rainbow');
 const blackButton = document.querySelector('#black');
 const clearButton = document.querySelector('#cleargrid');
 
-// Event Listeners
+// Event listeners for grid (re)setting
 slider.addEventListener('input', setGrid);
+clearButton.addEventListener('click', setGrid);
+
+//Event listeners for mode selection
 colorPicker.addEventListener('click', setMode);
 rainbowButton.addEventListener('click', setMode);
 blackButton.addEventListener('click', setMode);
-clearButton.addEventListener('click', setGrid);
 
 // Declaration and initialization of variables for functions
-const gridItem = [];
-let modeSelector = 'rainbow';
+let selectedMode = 'rainbow';
 
 function createGrid(gridSize = 16) {
-  let gridItemSize =
+  const gridCell = [];
+  let gridCellSize =
     parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
     gridSize;
   for (let i = 0; i < gridSize ** 2; i++) {
-    gridItem[i] = document.createElement('div');
-    gridItem[i].classList.add('grid-item');
-    gridItem[i].style.width = `${gridItemSize}px`;
-    gridItem[i].style.height = `${gridItemSize}px`;
-    container.appendChild(gridItem[i]);
-    gridItem[i].addEventListener('pointerdown', paintSelectedMode);
-    gridItem[i].addEventListener('pointerover', paintSelectedMode);
-    gridItem[i].addEventListener('touchmove', paintSelectedMode);
+    gridCell[i] = document.createElement('div');
+    gridCell[i].classList.add('grid-item');
+    gridCell[i].style.width = `${gridCellSize}px`;
+    gridCell[i].style.height = `${gridCellSize}px`;
+    container.appendChild(gridCell[i]);
+    gridCell[i].addEventListener('pointerdown', paintSelectedMode);
+    gridCell[i].addEventListener('pointerover', paintSelectedMode);
+    gridCell[i].addEventListener('touchmove', paintSelectedMode);
   }
 }
-createGrid(16);
+createGrid(); // For setting the grid immediately.
 
 function setMode(event) {
-  modeSelector = event.target.getAttribute('id');
+  selectedMode = event.target.getAttribute('id');
 }
 
 function paintSelectedMode(event) {
-  switch (modeSelector) {
+  switch (selectedMode) {
     case 'rainbow':
       paintRainbow(event);
       break;
