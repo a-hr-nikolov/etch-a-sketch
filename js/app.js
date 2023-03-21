@@ -15,7 +15,8 @@ function createGrid(gridSize = 16) {
     container.appendChild(gridItem[i]);
     gridItem[i].addEventListener('pointerdown', modeRouter);
     gridItem[i].addEventListener('pointerover', modeRouter);
-    gridItem[i].addEventListener('touch', modeRouter);
+    gridItem[i].addEventListener('touchstart', modeRouter);
+    gridItem[i].addEventListener('touchmove', modeRouter);
   }
 }
 createGrid(16);
