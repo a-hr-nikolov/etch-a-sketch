@@ -1,7 +1,23 @@
 import { paintRainbow, paintBlack, paintSingleColor } from './paints.js';
 
+// Declarations of DOM elements
 const container = document.querySelector('.grid-container');
+const slider = document.querySelector('#gridsize');
+const colorPicker = document.querySelector('#color-input');
+const rainbowButton = document.querySelector('#rainbow');
+const blackButton = document.querySelector('#black');
+const clearButton = document.querySelector('#cleargrid');
+
+// Event Listeners
+slider.addEventListener('input', setGrid);
+colorPicker.addEventListener('click', setMode);
+rainbowButton.addEventListener('click', setMode);
+blackButton.addEventListener('click', setMode);
+clearButton.addEventListener('click', setGrid);
+
+// Declaration and initialization of variables for functions
 const gridItem = [];
+let modeSelector = 'rainbow';
 
 function createGrid(gridSize = 16) {
   let gridItemSize =
@@ -20,22 +36,6 @@ function createGrid(gridSize = 16) {
 }
 createGrid(16);
 
-const slider = document.querySelector('#gridsize');
-slider.addEventListener('input', setGrid);
-
-const colorPicker = document.querySelector('#color-input');
-colorPicker.addEventListener('click', setMode);
-
-const rainbowButton = document.querySelector('#rainbow');
-rainbowButton.addEventListener('click', setMode);
-
-const blackButton = document.querySelector('#black');
-blackButton.addEventListener('click', setMode);
-
-const clearButton = document.querySelector('#cleargrid');
-clearButton.addEventListener('click', setGrid);
-
-let modeSelector = 'rainbow';
 function setMode(event) {
   modeSelector = event.target.getAttribute('id');
 }
