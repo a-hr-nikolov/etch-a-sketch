@@ -1,24 +1,26 @@
 import { paintRainbow, paintBlack, paintSingleColor } from './paints.js';
 
-// Declarations of DOM elements
+// Declarations of DOM element selectors
 const container = document.querySelector('.grid-container');
-const slider = document.querySelector('#gridsize');
-const colorPicker = document.querySelector('#color-input');
-const rainbowButton = document.querySelector('#rainbow');
-const blackButton = document.querySelector('#black');
+const gridSizeSlider = document.querySelector('#gridsize');
 const clearButton = document.querySelector('#cleargrid');
+const colorPicker = document.querySelector('#color-input');
+const rainbowModeButton = document.querySelector('#rainbow');
+const blackModeButton = document.querySelector('#black');
+
+// Initial paint mode
+let selectedMode = 'rainbow';
 
 // Event listeners for grid (re)setting
-slider.addEventListener('input', setGrid);
-clearButton.addEventListener('click', setGrid);
+gridSizeSlider.addEventListener('input', setGridSize);
+clearButton.addEventListener('click', setGridSize);
 
 //Event listeners for mode selection
 colorPicker.addEventListener('click', setMode);
-rainbowButton.addEventListener('click', setMode);
-blackButton.addEventListener('click', setMode);
+rainbowModeButton.addEventListener('click', setMode);
+blackModeButton.addEventListener('click', setMode);
 
-// Declaration and initialization of variables for functions
-let selectedMode = 'rainbow';
+// Functions
 
 function createGrid(gridSize = 16) {
   const gridCell = [];
@@ -56,8 +58,8 @@ function paintSelectedMode(event) {
   }
 }
 
-function setGrid() {
-  let newGridSize = parseInt(slider.value);
+function setGridSize() {
+  let newGridSize = parseInt(gridSizeSlider.value);
   container.innerHTML = '';
   document.querySelector(
     '#grid-size-text'
@@ -65,5 +67,5 @@ function setGrid() {
   createGrid(newGridSize);
 }
 
-// TODO
+// Reference. Don't use code from it, only use it for inspiration.
 // https://bscottnz.github.io/esketch/
