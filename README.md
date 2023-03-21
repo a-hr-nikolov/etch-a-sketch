@@ -6,6 +6,10 @@ The most challenging aspect is figuring out the logic around making an RGB etch-
 
 There a few other challenging aspects, which are not part of the main assignment, but I still want to tackle them progressively. You can see them in the TO-DO below.
 
+## Update on touch input
+
+For some reason touch input just doesn't work well with Etch-A-Sketch. I've been looking for solutions and currently, I've only managed to make the rainbow paint option work somewhat. Sadly, it is not how I want it to work, but I don't see a way to work around it, currently. I will look for a solution, but this isn't a priority.
+
 ## To Do:
 
 1. ~~Add a single color mode.~~
