@@ -10,6 +10,10 @@ There a few other challenging aspects, which are not part of the main assignment
 
 For some reason touch input just doesn't work well with Etch-A-Sketch. I've been looking for solutions and currently, I've only managed to make the rainbow paint option work somewhat. Sadly, it is not how I want it to work, but I don't see a way to work around it, currently. I will look for a solution, but this isn't a priority.
 
+## About refactoring
+
+I am looking at my app.js file and cringe. It isn't pretty. I don't know how to refactor it to make it look good. I think I need to figure out some better coding practices.
+
 ## To Do:
 
 1. ~~Add a single color mode.~~
