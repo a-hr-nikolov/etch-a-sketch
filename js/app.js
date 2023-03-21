@@ -13,9 +13,9 @@ function createGrid(gridSize = 16) {
     gridItem[i].style.width = `${gridItemSize}px`;
     gridItem[i].style.height = `${gridItemSize}px`;
     container.appendChild(gridItem[i]);
-    gridItem[i].addEventListener('pointerdown', modeRouter);
-    gridItem[i].addEventListener('pointerover', modeRouter);
-    gridItem[i].addEventListener('touchmove', modeRouter);
+    gridItem[i].addEventListener('pointerdown', paintSelectedMode);
+    gridItem[i].addEventListener('pointerover', paintSelectedMode);
+    gridItem[i].addEventListener('touchmove', paintSelectedMode);
   }
 }
 createGrid(16);
@@ -40,7 +40,7 @@ function setMode(event) {
   modeSelector = event.target.getAttribute('id');
 }
 
-function modeRouter(event) {
+function paintSelectedMode(event) {
   switch (modeSelector) {
     case 'rainbow':
       paintRainbow(event);
