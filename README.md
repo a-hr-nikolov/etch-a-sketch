@@ -17,7 +17,7 @@ I am looking at my app.js file and cringe. It isn't pretty. I don't know how to 
 ## To Do:
 
 1. ~~Add a single color mode.~~
-2. Add an eraser.
+2. ~~Add an eraser.~~
 3. Stylize the project.
 4. ~~Add a color picker as well.~~
 5. ~~Fix the borders to be displayed correctly~~
