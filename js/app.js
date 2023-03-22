@@ -3,6 +3,7 @@ import {
   paintBlack,
   paintSingleColor,
   erasePaintFromCell,
+  useTouch,
 } from './paints.js';
 
 // Declarations of DOM element selectors
