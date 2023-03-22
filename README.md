@@ -6,13 +6,13 @@ The most challenging aspect is figuring out the logic around making an RGB etch-
 
 There a few other challenging aspects, which are not part of the main assignment, but I still want to tackle them progressively. You can see them in the TO-DO below.
 
-## Update on touch input
+## ~~Update on touch input~~
 
-For some reason touch input just doesn't work well with Etch-A-Sketch. I've been looking for solutions and currently, I've only managed to make the rainbow paint option work somewhat. Sadly, it is not how I want it to work, but I don't see a way to work around it, currently. I will look for a solution, but this isn't a priority.
+~~For some reason touch input just doesn't work well with Etch-A-Sketch. I've been looking for solutions and currently, I've only managed to make the rainbow paint option work somewhat. Sadly, it is not how I want it to work, but I don't see a way to work around it, currently. I will look for a solution, but this isn't a priority.~~
 
-## About refactoring
+## Touch input works
 
-I am looking at my app.js file and cringe. It isn't pretty. I don't know how to refactor it to make it look good. I think I need to figure out some better coding practices.
+The whole situation just bothered me, so I decided to make touch work. I finally figured out how to do it, although I couldn't find anything about it online. I am not sure if my solution is "clean", but it works, and can't see anyone with a similar app who's made it work. So... a win! :D
 
 ## To Do:
 
@@ -26,3 +26,4 @@ I am looking at my app.js file and cringe. It isn't pretty. I don't know how to 
 8. ~~Add comments to the JS file.~~
 9. Refactor CSS wherever possible.
 10. ~~Refactor JS - separate functions in other files to not clutter the main file.~~
+11. ~~Make touch input work~~
