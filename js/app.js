@@ -54,6 +54,9 @@ function createGrid(gridSize = 16) {
 createGrid(); // For setting the grid immediately.
 
 function setMode(event) {
+  document
+    .querySelectorAll('.grid-item')
+    .forEach(item => item.setAttribute('data-flag', '0'));
   selectedMode = event.target.getAttribute('id');
 }
 
