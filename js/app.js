@@ -35,14 +35,20 @@ function createGrid(gridSize = 16) {
     parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
     gridSize;
   for (let i = 0; i < gridSize ** 2; i++) {
+    // Grid cell initialization
     gridCell[i] = document.createElement('div');
     gridCell[i].classList.add('grid-item');
     gridCell[i].style.width = `${gridCellSize}px`;
     gridCell[i].style.height = `${gridCellSize}px`;
-    container.appendChild(gridCell[i]);
+
     gridCell[i].addEventListener('pointerdown', paintSelectedMode);
     gridCell[i].addEventListener('pointerover', paintSelectedMode);
     gridCell[i].addEventListener('touchmove', paintSelectedMode);
+
+    // Necessary for touch input to work
+    gridCell[i].setAttribute('data-flag', '0');
+
+    container.appendChild(gridCell[i]);
   }
 }
 createGrid(); // For setting the grid immediately.

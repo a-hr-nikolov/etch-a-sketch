@@ -19,7 +19,15 @@ function paintRainbow(event) {
     event.preventDefault();
     const touch = event.touches[0];
     const target = document.elementFromPoint(touch.clientX, touch.clientY);
-    if (target && target.classList.contains('grid-item')) {
+    if (
+      target &&
+      target.classList.contains('grid-item') &&
+      target.getAttribute('data-flag') === '0'
+    ) {
+      document
+        .querySelectorAll('.grid-item')
+        .forEach(item => item.setAttribute('data-flag', '0'));
+      target.setAttribute('data-flag', '1');
       target.style.background = `rgb(${Math.floor(
         Math.random() * 256
       )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
