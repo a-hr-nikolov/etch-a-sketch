@@ -1,4 +1,9 @@
-import { paintRainbow, paintBlack, paintSingleColor } from './paints.js';
+import {
+  paintRainbow,
+  paintBlack,
+  paintSingleColor,
+  erasePaintFromCell,
+} from './paints.js';
 
 // Declarations of DOM element selectors
 const container = document.querySelector('.grid-container');
@@ -7,6 +12,7 @@ const clearButton = document.querySelector('#cleargrid');
 const colorPicker = document.querySelector('#color-input');
 const rainbowModeButton = document.querySelector('#rainbow');
 const blackModeButton = document.querySelector('#black');
+const eraserButton = document.querySelector('#eraser');
 
 // Initial paint mode
 let selectedMode = 'rainbow';
@@ -19,6 +25,7 @@ clearButton.addEventListener('click', setGridSize);
 colorPicker.addEventListener('click', setMode);
 rainbowModeButton.addEventListener('click', setMode);
 blackModeButton.addEventListener('click', setMode);
+eraserButton.addEventListener('click', setMode);
 
 // Functions
 
@@ -54,6 +61,9 @@ function paintSelectedMode(event) {
       break;
     case 'color-input':
       paintSingleColor(event);
+      break;
+    case 'eraser':
+      erasePaintFromCell(event);
       break;
   }
 }
