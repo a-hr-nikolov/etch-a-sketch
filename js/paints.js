@@ -43,10 +43,10 @@ function paintSingleColor(event) {
   }
 }
 
-function erasePaint(event) {
+function erasePaintFromCell(event) {
   if (event.buttons === 1) {
     event.target.style.background = 'transparent';
   }
 }
 
-export { paintRainbow, paintBlack, paintSingleColor };
+export { paintRainbow, paintBlack, paintSingleColor, erasePaintFromCell };
