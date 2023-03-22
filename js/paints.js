@@ -65,6 +65,25 @@ function paintSingleColor(event) {
       document.querySelector('#color-input').value
     }`;
   }
+
+  if (event.type == 'touchmove') {
+    event.preventDefault();
+    const touch = event.touches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    if (
+      target &&
+      target.classList.contains('grid-item') &&
+      target.getAttribute('data-flag') === '0'
+    ) {
+      document
+        .querySelectorAll('.grid-item')
+        .forEach(item => item.setAttribute('data-flag', '0'));
+      target.setAttribute('data-flag', '1');
+      target.style.background = `${
+        document.querySelector('#color-input').value
+      }`;
+    }
+  }
 }
 
 function erasePaintFromCell(event) {
