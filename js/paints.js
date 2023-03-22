@@ -4,91 +4,45 @@
 
 import useTouch from './useTouch.js';
 
-// function useTouch(event, color) {
-//   event.preventDefault();
-//   const touch = event.touches[0];
-//   const target = document.elementFromPoint(touch.clientX, touch.clientY);
-//   if (
-//     target &&
-//     target.classList.contains('grid-item') &&
-//     target.getAttribute('data-flag') === '0'
-//   ) {
-//     document
-//       .querySelectorAll('.grid-item')
-//       .forEach(item => item.setAttribute('data-flag', '0'));
-//     target.setAttribute('data-flag', '1');
-//     target.style.background = color;
-//   }
-// }
-
 function paintRainbow(event) {
-  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+  const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
     Math.random() * 256
   )}, ${Math.floor(Math.random() * 256)})`;
 
   // Handle mouse input
   if (event.buttons === 1) {
-    event.target.style.background = randomColor;
+    event.target.style.background = color;
   }
 
   // Handle touch input
-  if (event.type == 'touchmove') useTouch(event, randomColor);
+  if (event.type == 'touchmove') useTouch(event, color);
 }
 
 function paintBlack(event) {
-  if (event.buttons === 1) {
-    event.target.style.background = 'black';
-  }
+  const color = `black`;
 
-  if (event.type == 'touchmove') {
-    event.preventDefault();
-    const touch = event.touches[0];
-    const target = document.elementFromPoint(touch.clientX, touch.clientY);
-    if (
-      target &&
-      target.classList.contains('grid-item') &&
-      target.getAttribute('data-flag') === '0'
-    ) {
-      document
-        .querySelectorAll('.grid-item')
-        .forEach(item => item.setAttribute('data-flag', '0'));
-      target.setAttribute('data-flag', '1');
-      target.style.background = 'black';
-    }
+  if (event.buttons === 1) {
+    event.target.style.background = color;
   }
+  if (event.type == 'touchmove') useTouch(event, color);
 }
 
 function paintSingleColor(event) {
-  if (event.buttons === 1) {
-    event.target.style.background = `${
-      document.querySelector('#color-input').value
-    }`;
-  }
+  const color = `${document.querySelector('#color-input').value}`;
 
-  if (event.type == 'touchmove') {
-    event.preventDefault();
-    const touch = event.touches[0];
-    const target = document.elementFromPoint(touch.clientX, touch.clientY);
-    if (
-      target &&
-      target.classList.contains('grid-item') &&
-      target.getAttribute('data-flag') === '0'
-    ) {
-      document
-        .querySelectorAll('.grid-item')
-        .forEach(item => item.setAttribute('data-flag', '0'));
-      target.setAttribute('data-flag', '1');
-      target.style.background = `${
-        document.querySelector('#color-input').value
-      }`;
-    }
+  if (event.buttons === 1) {
+    event.target.style.background = color;
   }
+  if (event.type == 'touchmove') useTouch(event, color);
 }
 
 function erasePaintFromCell(event) {
+  const color = `transparent`;
+
   if (event.buttons === 1) {
-    event.target.style.background = 'transparent';
+    event.target.style.background = color;
   }
+  if (event.type == 'touchmove') useTouch(event, color);
 }
 
 export {
