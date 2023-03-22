@@ -23,6 +23,6 @@ I am looking at my app.js file and cringe. It isn't pretty. I don't know how to 
 5. ~~Fix the borders to be displayed correctly~~
 6. Find a solution for grid size edge cases (sometimes they don't divide evenly and a 1-2px white space appears on-screen).
 7. Stylize the color picker input field somehow.
-8. Add comments to the JS file.
+8. ~~Add comments to the JS file.~~
 9. Refactor CSS wherever possible.
-10. Refactor JS - separate functions in other files to not clutter the main file.
+10. ~~Refactor JS - separate functions in other files to not clutter the main file.~~
