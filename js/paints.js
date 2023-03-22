@@ -43,4 +43,10 @@ function paintSingleColor(event) {
   }
 }
 
+function erasePaint(event) {
+  if (event.buttons === 1) {
+    event.target.style.background = 'transparent';
+  }
+}
+
 export { paintRainbow, paintBlack, paintSingleColor };
