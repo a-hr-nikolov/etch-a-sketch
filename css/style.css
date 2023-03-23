@@ -63,16 +63,26 @@ button,
 #color-input {
   box-sizing: border-box;
   background: white;
-  border: 2px solid white;
+  border: none;
   border-radius: 5px;
-  padding: 3px;
   margin: 2px;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   color: darkslategray;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   box-shadow: 0 6px pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#color-input::-webkit-color-swatch {
+  border-radius: 15%;
+}
+
+#color-input::-moz-color-swatch {
+  border-radius: 15%;
 }
 
 button:hover,
