@@ -17,21 +17,25 @@
   </head>
   <body>
     <div class="grid-input">
-      <span id="grid-size-text">16x16</span>
-      <input type="range" min="1" max="64" value="16" id="gridsize" />
-      <input type="color" id="color-input" />
-      <button id="rainbow">
-        <div class="paint rainbow"></div>
-      </button>
-      <button id="black">
-        <div class="paint black"></div>
-      </button>
-      <button id="eraser">
-        <i class="fa-solid fa-eraser"></i>
-      </button>
-      <button id="cleargrid">
-        <i class="fa-solid fa-rotate-right"></i>
-      </button>
+      <div class="slider-container">
+        <div id="grid-size-text">16x16</div>
+        <input type="range" min="1" max="64" value="16" id="gridsize" />
+      </div>
+      <div class="button-container">
+        <input type="color" id="color-input" />
+        <button id="rainbow">
+          <div class="paint rainbow"></div>
+        </button>
+        <button id="black">
+          <div class="paint black"></div>
+        </button>
+        <button id="eraser">
+          <i class="fa-solid fa-eraser"></i>
+        </button>
+        <button id="cleargrid">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </div>
     </div>
     <div class="grid-container"></div>
   </body>
