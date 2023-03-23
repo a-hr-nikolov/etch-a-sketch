@@ -30,10 +30,19 @@ eraserButton.addEventListener('click', setMode);
 // Functions
 
 function createGrid(gridSize = 16) {
+  container.style.cssText = ''; // Initialize container
+
+  const containerSize = parseFloat(
+    window.getComputedStyle(container).getPropertyValue('width')
+  );
   const gridCell = [];
-  let gridCellSize =
-    parseFloat(window.getComputedStyle(container).getPropertyValue('width')) /
-    gridSize;
+  let gridCellSize = Math.floor((containerSize / gridSize) * 10) / 10;
+
+  if (gridCellSize * gridSize !== containerSize)
+    container.style.cssText = `width: ${gridCellSize * gridSize}px; height: ${
+      gridCellSize * gridSize
+    }px`;
+
   for (let i = 0; i < gridSize ** 2; i++) {
     // Grid cell initialization
     gridCell[i] = document.createElement('div');
