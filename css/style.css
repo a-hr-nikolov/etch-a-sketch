@@ -142,6 +142,7 @@ button,
   box-sizing: border-box;
   background: white;
   color: rgba(0, 0, 144, 1);
+  border: none;
 }
 
 .toggle.off {
@@ -170,6 +171,7 @@ span {
   font-size: 2rem;
   color: rgba(0, 0, 144, 1);
   background: white;
+  border: none;
 }
 
 button.click:active {
