@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: darkslategray;
+  background: burlywood;
   height: 100svh;
   margin: 0;
   gap: 8px;
@@ -38,25 +38,22 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-color: white;
   border-radius: 10px;
-  overflow: hidden;
   box-sizing: content-box;
   padding: 0;
+  margin: 0;
   width: 800px;
   height: 800px;
-  /* border-right: 1px solid black;
-  border-top: 1px solid black; */
+  gap: 5px;
 }
 
 .grid-item {
   margin: 0;
   padding: 0;
-  /* border-bottom: 1px solid black;
-  border-left: 1px solid black; */
-  border: 1px solid black;
   box-sizing: border-box;
   user-select: none;
+  box-shadow: 0 0 3px 3px rgb(70, 70, 70);
+  background-color: white;
 }
 
 button,

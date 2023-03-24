@@ -36,12 +36,12 @@ function createGrid(gridSize = 16) {
     window.getComputedStyle(container).getPropertyValue('width')
   );
   const gridCell = [];
-  let gridCellSize = Math.floor((containerSize / gridSize) * 10) / 10;
+  let gridCellSize =
+    Math.floor(((containerSize - gridSize * 5) / gridSize) * 10) / 10;
 
-  if (gridCellSize * gridSize !== containerSize)
-    container.style.cssText = `width: ${gridCellSize * gridSize}px; height: ${
-      gridCellSize * gridSize
-    }px`;
+  container.style.cssText = `width: ${
+    gridCellSize * gridSize + gridSize * 5
+  }px; height: ${gridCellSize * gridSize + gridSize * 5}px`;
 
   for (let i = 0; i < gridSize ** 2; i++) {
     // Grid cell initialization
