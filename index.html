@@ -14,23 +14,28 @@
   </head>
   <body>
     <div class="grid-input">
-      <div class="slider-container">
-        <div id="grid-size-text">16x16</div>
-        <input type="range" min="1" max="32" value="16" id="gridsize" />
+      <div class="slider-controls">
+        <div class="slider-container">
+          <div id="grid-size-text">16x16</div>
+          <input type="range" min="1" max="32" value="16" id="gridsize" />
+        </div>
+        <button id="cleargrid" class="icon click">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
       </div>
       <div class="button-container">
-        <input type="color" id="color-input" />
         <button id="rainbow" class="toggle">
           <span>rainbow</span>
         </button>
         <button id="grayscale" class="toggle off">
           <span>grayscale</span>
         </button>
+        <label id="color-label" class="toggle off" for="color-input"
+          >Choose<input type="color" id="color-input" value="#e66465"
+        /></label>
+
         <button id="eraser" class="icon toggle off">
           <i class="fa-solid fa-eraser"></i>
-        </button>
-        <button id="cleargrid" class="icon click">
-          <i class="fa-solid fa-rotate-right"></i>
         </button>
       </div>
     </div>
