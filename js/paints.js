@@ -37,7 +37,7 @@ function paintSingleColor(event) {
 }
 
 function erasePaintFromCell(event) {
-  const color = `transparent`;
+  const color = `white`;
 
   if (event.buttons === 1) {
     event.target.style.background = color;
