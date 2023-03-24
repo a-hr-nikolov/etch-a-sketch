@@ -63,6 +63,8 @@ function createGrid(gridSize = 16) {
 createGrid(); // For setting the grid immediately.
 
 function setMode(event) {
+  selectedMode = event.target.getAttribute('id');
+
   // Turning off the other buttons
   document
     .querySelectorAll('.toggle')
@@ -70,8 +72,8 @@ function setMode(event) {
 
   // Turning on the clicked button
   event.target.classList.remove('off');
-
-  selectedMode = event.target.getAttribute('id');
+  if (selectedMode === 'color-input')
+    document.querySelector('#color-label').classList.remove('off');
 
   // Edge case handler: Enables touch input on the last painted item
   document

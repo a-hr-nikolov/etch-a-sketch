@@ -115,6 +115,14 @@ button,
   background: none;
   margin: 0;
   padding: 0;
+  border: none;
+}
+
+#color-input:hover {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 #color-input::-webkit-color-swatch {
@@ -124,7 +132,7 @@ button,
 }
 
 #color-input::-moz-color-swatch {
-  border: none;
+  border: 3px solid white;
   margin: 0;
   padding: 0;
 }
