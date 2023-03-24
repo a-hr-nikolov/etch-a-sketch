@@ -18,8 +18,9 @@ function paintRainbow(event) {
   if (event.type == 'touchmove') useTouch(event, color);
 }
 
-function paintBlack(event) {
-  const color = `black`;
+function paintGrayscale(event) {
+  const grayscaleValue = Math.floor(Math.random() * 128 + 64);
+  const color = `rgb(${grayscaleValue}, ${grayscaleValue}, ${grayscaleValue})`;
 
   if (event.buttons === 1) {
     event.target.style.background = color;
@@ -47,7 +48,7 @@ function erasePaintFromCell(event) {
 
 export {
   paintRainbow,
-  paintBlack,
+  paintGrayscale,
   paintSingleColor,
   erasePaintFromCell,
   useTouch,

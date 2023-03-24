@@ -1,6 +1,6 @@
 import {
   paintRainbow,
-  paintBlack,
+  paintGrayscale,
   paintSingleColor,
   erasePaintFromCell,
 } from './paints.js';
@@ -11,7 +11,7 @@ const gridSizeSlider = document.querySelector('#gridsize');
 const clearButton = document.querySelector('#cleargrid');
 const colorPicker = document.querySelector('#color-input');
 const rainbowModeButton = document.querySelector('#rainbow');
-const blackModeButton = document.querySelector('#black');
+const grayscaleModeButton = document.querySelector('#grayscale');
 const eraserButton = document.querySelector('#eraser');
 
 // Initial paint mode
@@ -24,7 +24,7 @@ clearButton.addEventListener('click', setGridSize);
 //Event listeners for mode selection
 colorPicker.addEventListener('click', setMode);
 rainbowModeButton.addEventListener('click', setMode);
-blackModeButton.addEventListener('click', setMode);
+grayscaleModeButton.addEventListener('click', setMode);
 eraserButton.addEventListener('click', setMode);
 
 // Functions
@@ -74,8 +74,8 @@ function paintSelectedMode(event) {
     case 'rainbow':
       paintRainbow(event);
       break;
-    case 'black':
-      paintBlack(event);
+    case 'grayscale':
+      paintGrayscale(event);
       break;
     case 'color-input':
       paintSingleColor(event);
