@@ -7,11 +7,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgb(4, 0, 70);
   background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
+    135deg,
+    rgba(4, 0, 70, 1) 0%,
+    rgba(0, 0, 144, 1) 50%,
+    rgb(73, 64, 193) 100%
   );
   height: 100svh;
   margin: 0;
@@ -48,8 +49,10 @@ body {
   padding: 0;
   margin: 0;
   width: 800px;
+  max-width: 90vw;
   height: 800px;
-  gap: 5px;
+  max-height: 90vw;
+  gap: 1px;
 }
 
 .grid-item {
@@ -57,7 +60,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  box-shadow: 0 0 3px 3px rgb(70, 70, 70);
+  box-shadow: 0 0 2px 3px rgba(90, 90, 90, 1);
   background-color: white;
 }
 
@@ -68,10 +71,10 @@ button,
   border: none;
   border-radius: 5px;
   margin: 2px;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   color: darkslategray;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   box-shadow: 0 6px pink;
   display: flex;

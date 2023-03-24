@@ -37,11 +37,11 @@ function createGrid(gridSize = 16) {
   );
   const gridCell = [];
   let gridCellSize =
-    Math.floor(((containerSize - gridSize * 5) / gridSize) * 10) / 10;
+    Math.floor(((containerSize - gridSize) / gridSize) * 10) / 10;
 
   container.style.cssText = `width: ${
-    gridCellSize * gridSize + gridSize * 5
-  }px; height: ${gridCellSize * gridSize + gridSize * 5}px`;
+    gridCellSize * gridSize + gridSize
+  }px; height: ${gridCellSize * gridSize + gridSize}px`;
 
   for (let i = 0; i < gridSize ** 2; i++) {
     // Grid cell initialization
