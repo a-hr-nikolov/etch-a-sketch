@@ -105,7 +105,6 @@ function setGridSize() {
     '#grid-size-text'
   ).innerText = `${newGridSize}x${newGridSize}`;
   createGrid(newGridSize);
-  if (selectedMode === 'eraser') selectedMode = 'rainbow';
 }
 
 // Reference. Don't use code from it, only use it for inspiration.
