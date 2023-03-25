@@ -35,13 +35,16 @@ function createGrid(gridSize = 16) {
   const containerSize = parseFloat(
     window.getComputedStyle(container).getPropertyValue('width')
   );
+  const gapSize = parseFloat(
+    window.getComputedStyle(container).getPropertyValue('gap')
+  );
   const gridCell = [];
   let gridCellSize =
-    Math.floor(((containerSize - gridSize) / gridSize) * 10) / 10;
+    Math.floor(((containerSize - gridSize * gapSize) / gridSize) * 10) / 10;
 
   container.style.cssText = `width: ${
-    gridCellSize * gridSize + gridSize
-  }px; height: ${gridCellSize * gridSize + gridSize}px`;
+    gridCellSize * gridSize + gridSize * gapSize
+  }px; height: ${gridCellSize * gridSize + gridSize * gapSize}px`;
 
   for (let i = 0; i < gridSize ** 2; i++) {
     // Grid cell initialization
