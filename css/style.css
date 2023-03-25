@@ -40,6 +40,7 @@ body {
   user-select: none;
   box-shadow: inset -2px -2px 1.5px 0px rgba(0, 0, 0, 0.755);
   background-color: white;
+  border-radius: 4px;
 }
 
 .grid-input {
@@ -52,6 +53,7 @@ body {
 
 .slider-controls {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
@@ -59,6 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20rem;
   gap: 8px;
   margin-bottom: 8px;
 }
@@ -72,15 +75,9 @@ button > * {
   pointer-events: none;
 }
 
-button:hover,
-#color-input:hover,
-label {
-  cursor: pointer;
-}
-
 button,
 .toggle {
-  border-radius: 5px;
+  border-radius: 4px;
   height: 3rem;
   width: 3rem;
 }
@@ -98,16 +95,20 @@ button,
 
 #color-input::-webkit-color-swatch {
   border: 3px solid white;
+  border-radius: 4px;
 }
 
 #color-input::-moz-color-swatch {
   border: 3px solid white;
+  border-radius: 4px;
 }
 
 @media (hover: hover) {
   button:hover,
-  .toggle:hover {
+  .toggle:hover,
+  label:hover {
     scale: 1.05;
+    cursor: pointer;
   }
 }
 
