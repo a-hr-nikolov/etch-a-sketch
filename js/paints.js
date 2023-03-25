@@ -5,9 +5,24 @@
 import useTouch from './useTouch.js';
 
 function paintRainbow(event) {
-  const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-    Math.random() * 256
-  )}, ${Math.floor(Math.random() * 256)})`;
+  const rainbowColors = [
+    'rgb(255, 0, 0)',
+    'rgb(255, 154, 0)',
+    'rgb(208, 222, 33)',
+    'rgb(79, 220, 74)',
+    'rgb(63, 218, 216)',
+    'rgb(47, 201, 226)',
+    'rgb(28, 127, 238)',
+    'rgb(95, 21, 242)',
+    'rgb(186, 12, 248)',
+    'rgb(251, 7, 217)',
+    'rgb(255, 0, 0)',
+  ];
+  const color = rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
+
+  // const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+  //   Math.random() * 256
+  // )}, ${Math.floor(Math.random() * 256)})`;
 
   // Handle mouse input
   if (event.buttons === 1) {
