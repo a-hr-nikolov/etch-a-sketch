@@ -30,18 +30,24 @@ eraserButton.addEventListener('click', setMode);
 // Functions
 
 function createGrid(gridSize = 16) {
-  container.style.cssText = ''; // Initialize container
+  // Resetting container
+  container.style.cssText = '';
 
+  // Get CSS values dynamically, instead of hard-coding them
   const containerSize = parseFloat(
     window.getComputedStyle(container).getPropertyValue('width')
   );
   const gapSize = parseFloat(
     window.getComputedStyle(container).getPropertyValue('gap')
   );
+
+  // Initializing grid and cell size, based on the container size.
+  // The size is rounded down to the first digit after the decimal point.
   const gridCell = [];
   let gridCellSize =
     Math.floor(((containerSize - gridSize * gapSize) / gridSize) * 10) / 10;
 
+  // Resizing the container to cover edge cases and responsive design
   container.style.cssText = `width: ${
     gridCellSize * gridSize + gridSize * gapSize
   }px; height: ${gridCellSize * gridSize + gridSize * gapSize}px`;
@@ -102,12 +108,11 @@ function paintSelectedMode(event) {
 }
 
 function setGridSize() {
-  let newGridSize = parseInt(gridSizeSlider.value);
+  const gridSize = parseInt(gridSizeSlider.value);
+  const gridSizeDisplay = document.querySelector('#grid-size-text');
   container.innerHTML = '';
-  document.querySelector(
-    '#grid-size-text'
-  ).innerText = `${newGridSize}x${newGridSize}`;
-  createGrid(newGridSize);
+  gridSizeDisplay.innerText = `${gridSize}x${gridSize}`;
+  createGrid(gridSize);
 }
 
 // Reference. Don't use code from it, only use it for inspiration.
