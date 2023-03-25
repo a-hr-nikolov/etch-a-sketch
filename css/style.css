@@ -47,7 +47,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  border-radius: 10px;
   box-sizing: content-box;
   padding: 0;
   margin: 0;
@@ -55,14 +54,14 @@ body {
   max-width: 90vw;
   height: 800px;
   max-height: 90vw;
-  gap: 1px;
+  gap: 0px;
 }
 
 .grid-item {
   margin: 0;
   padding: 0;
   user-select: none;
-  box-shadow: 0 0 2px 3px rgba(90, 90, 90, 1);
+  box-shadow: inset -2px -2px 1.5px 0px rgba(0, 0, 0, 0.755);
   background-color: white;
 }
 
@@ -116,6 +115,7 @@ button,
   margin: 0;
   padding: 0;
   border: none;
+  appearance: none;
 }
 
 #color-input:hover {
@@ -185,4 +185,16 @@ span {
 button.click:active {
   box-shadow: none;
   scale: 1.1;
+}
+
+@media (max-width: 426px) {
+  .grid-input {
+    scale: 0.7;
+  }
+  body {
+    gap: 3px;
+  }
+  .grid-item {
+    box-shadow: inset -1.5px -1.5px 1px 0px rgba(0, 0, 0, 0.755);
+  }
 }
