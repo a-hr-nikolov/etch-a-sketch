@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -48,8 +50,6 @@ body {
   justify-content: center;
   align-content: center;
   box-sizing: content-box;
-  padding: 0;
-  margin: 0;
   width: 800px;
   max-width: 90vw;
   height: 800px;
@@ -58,8 +58,6 @@ body {
 }
 
 .grid-item {
-  margin: 0;
-  padding: 0;
   user-select: none;
   box-shadow: inset -2px -2px 1.5px 0px rgba(0, 0, 0, 0.755);
   background-color: white;
@@ -112,29 +110,21 @@ button,
 
 #color-input {
   background: none;
-  margin: 0;
-  padding: 0;
   border: none;
   appearance: none;
 }
 
 #color-input:hover {
   background: none;
-  margin: 0;
-  padding: 0;
   border: none;
 }
 
 #color-input::-webkit-color-swatch {
   border: 3px solid white;
-  margin: 0;
-  padding: 0;
 }
 
 #color-input::-moz-color-swatch {
   border: 3px solid white;
-  margin: 0;
-  padding: 0;
 }
 
 @media (hover: hover) {
@@ -166,11 +156,6 @@ label.toggle {
   align-items: center;
   padding: 10px;
   gap: 5px;
-}
-
-span {
-  margin: 0;
-  padding: 0;
 }
 
 .icon {

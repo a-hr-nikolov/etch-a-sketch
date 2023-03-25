@@ -110,8 +110,8 @@ function paintSelectedMode(event) {
 function setGridSize() {
   const gridSize = parseInt(gridSizeSlider.value);
   const gridSizeDisplay = document.querySelector('#grid-size-text');
-  container.innerHTML = '';
   gridSizeDisplay.innerText = `${gridSize}x${gridSize}`;
+  container.innerHTML = '';
   createGrid(gridSize);
 }
 
