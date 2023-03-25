@@ -114,6 +114,3 @@ function setGridSize() {
   container.innerHTML = '';
   createGrid(gridSize);
 }
-
-// Reference. Don't use code from it, only use it for inspiration.
-// https://bscottnz.github.io/esketch/
