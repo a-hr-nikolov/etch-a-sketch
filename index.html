@@ -20,15 +20,16 @@
     <script type="module" src="./js/app.js" defer></script>
   </head>
   <body>
+    <h1>Etch-a-Sketch</h1>
     <div class="grid-input">
       <div class="slider-controls">
         <div class="slider-display">
           <div id="grid-size-text">16x16</div>
-          <input type="range" min="10" max="32" value="16" id="gridsize" />
+          <button id="cleargrid" class="icon">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
         </div>
-        <button id="cleargrid" class="icon">
-          <i class="fa-solid fa-rotate-right"></i>
-        </button>
+        <input type="range" min="10" max="32" value="16" id="gridsize" />
       </div>
       <div class="button-container">
         <button id="rainbow" class="toggle">rainbow</button>
