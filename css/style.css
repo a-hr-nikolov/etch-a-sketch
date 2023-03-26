@@ -175,6 +175,13 @@ button:active,
 .signature {
   font-size: 1.5rem;
   margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 123);
+  text-shadow: 1px 1px 0px black;
 }
 
 /* button#rainbow {
