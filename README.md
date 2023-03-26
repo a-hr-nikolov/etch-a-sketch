@@ -28,13 +28,13 @@ When I think about it, perhaps I can use PostCSS to make it work better, but tha
 
 1. ~~Add a single color mode.~~
 2. ~~Add an eraser.~~
-3. Stylize the project.
+3. ~~Stylize the project.~~
 4. ~~Add a color picker as well.~~
 5. ~~Fix the borders to be displayed correctly~~
-6. Find a solution for grid size edge cases (sometimes they don't divide evenly and a 1-2px white space appears on-screen).
-7. Stylize the color picker input field somehow.
+6. ~~Find a solution for grid size edge cases (sometimes they don't divide evenly and a 1-2px white space appears on-screen).~~
+7. ~~Stylize the color picker input field somehow.~~
 8. ~~Add comments to the JS file.~~
 9. Refactor CSS wherever possible.
 10. ~~Refactor JS - separate functions in other files to not clutter the main file.~~
 11. ~~Make touch input work~~
-12. Figure out how to make the design responsive
+12. ~~Figure out how to make the design responsive~~
