@@ -1,40 +1,32 @@
-# etch-a-sketch
+# Etch-a-Sketch
 
-A fun little project that doesn't have a lot of complexity, but is useful to practice certain DOM-manipulation concepts.
+## 👉 [Try it out here](https://a-hr-nikolov.github.io/etch-a-sketch/)
 
-The most challenging aspect is figuring out the logic around making an RGB etch-a-sketch, which also doesn't change the hue and saturation, but only the luminosity of the color on second pass. Though I have figured this logic out (can be seen on another branch), I decided that it is not actually a desired feature. That's why I branched it off. I may refactor it one day, if I ever get back to it.
+A fun little project that turned out to have a lot more complexity, if one went a bit beyond the basics.
 
-There a few other challenging aspects, which are not part of the main assignment, but I still want to tackle them progressively. You can see them in the TO-DO below.
+I considered whether or not I should refactor it as time progressed, but I think that it is better to have it as something that shows where I was in the past.
 
-### ~~Update on touch input~~
+## The steps along the way
 
-~~For some reason touch input just doesn't work well with Etch-A-Sketch. I've been looking for solutions and currently, I've only managed to make the rainbow paint option work somewhat. Sadly, it is not how I want it to work, but I don't see a way to work around it, currently. I will look for a solution, but this isn't a priority.~~
+Here I will explain what I've been through when working on this project. I consider this my reflection on the progress I've made as I gained understanding of the requirements and the added complexity.
 
-### Touch input works
+- ### The initial logic
 
-The whole situation just bothered me, so I decided to make touch work. I finally figured out how to do it, although I couldn't find anything about it online. I am not sure if my solution is "clean", but it works, and can't see anyone with a similar app who's made it work. So... a win! :D
+I didn't find the initial requirement hard. I had to fill up a wrapping flexbox with items so that it simulates a grid. The challenge was supposed to be figuring out how to size them dynamically, but to me it was rather obvious. My solution, although not pretty, is functional and can be seen in the code.
 
-### Grid-size edge cases
+The second challenge was to manipulate the grid items to change their color on mouseover. I did it without problems. The most challenging aspect was figuring out the logic around making an RGB etch-a-sketch, which also doesn't change the color on second pass, but only darkens it. Though I have figured this logic out (can be seen on another branch), I decided that it is not actually a desired feature. That's why I branched it off.
 
-I have some idea on how to do this, but it isn't pretty.
+Finally, there was the challenge to give the user the option to choose the gridsize, with a max of a 100x100 grid. I did that, but 100x100 became too laggy and looked bad on small screens, so I capped it at 64 at first, then at 32. Even that is a bit much though.
 
-The first way is to simply limit the number of possible inputs. For example, I can set the grid to something that works well with multiples of 8. However, that limits my options when it comes to responsive design (which is another can of worms, but I won't be opening it now).
+- ### Adding complexity
 
-The second way is to have the entire container resize to fit the number of grid items as well. For example, on each call of the createGrid function, I can set the container to 800x800px, create the cells, set their size, check (size x cells-per-row) and if it isn't 800px, then I set the size of the container to the that. This is the best for responsive design and will allow me to have a more flexible grid size, but it will limit the design options. That being said, I think I will take that route.
+The above took care of everything the project required. Everything below is of my own design, because I wanted to challenge myself.
 
-When I think about it, perhaps I can use PostCSS to make it work better, but that would be at a later point.
+This is the extra functionality that I've included:
 
-## To Do:
+1. Option to pick from different modes: rainbow (random vibrant colors), grayscale, custom color (through a color picker) and an eraser.
+2. A slider input for better UX.
+3. Working touch input
+4. Responsive design
 
-1. ~~Add a single color mode.~~
-2. ~~Add an eraser.~~
-3. ~~Stylize the project.~~
-4. ~~Add a color picker as well.~~
-5. ~~Fix the borders to be displayed correctly~~
-6. ~~Find a solution for grid size edge cases (sometimes they don't divide evenly and a 1-2px white space appears on-screen).~~
-7. ~~Stylize the color picker input field somehow.~~
-8. ~~Add comments to the JS file.~~
-9. Refactor CSS wherever possible.
-10. ~~Refactor JS - separate functions in other files to not clutter the main file.~~
-11. ~~Make touch input work~~
-12. ~~Figure out how to make the design responsive~~
+The touch input was by far the most challenging aspect, because I had to go through a lot of trial and error, before I figure out how to make it work properly. Even now it's more of a hack, but I left it like that, because I'm honestly proud of the solution, given the constraints I had. I have not yet seen anyone with this project make their touch input work, so... a win! :D
