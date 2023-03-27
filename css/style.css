@@ -126,6 +126,7 @@ button,
   width: 8rem;
   box-sizing: border-box;
   color: black;
+  user-select: none;
 }
 
 .toggle.off {
