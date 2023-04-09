@@ -153,7 +153,8 @@ label.toggle {
 }
 
 button:active,
-.toggle:active {
+.toggle:active,
+a:active {
   scale: 1.1;
 }
 
@@ -181,8 +182,7 @@ button:active,
 
 a {
   text-decoration: none;
-  color: rgb(255, 255, 123);
-  text-shadow: 1px 1px 0px black;
+  color: rgb(0, 13, 255);
 }
 
 /* button#rainbow {
