@@ -1,76 +1,95 @@
+/* GLOBAL */
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body {
+/* LAYOUT */
+
+body,
+.grid-container,
+.grid-input,
+.slider-display,
+.slider-controls,
+.button-container {
   display: flex;
+}
+
+.slider-controls,
+.grid-input {
+  flex-direction: column;
+}
+
+body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+
+  height: 100svh;
   background: #00b5ff;
   background: linear-gradient(
     135deg,
     rgba(0, 181, 255, 1) 0%,
     rgba(0, 241, 255, 1) 100%
   );
-  height: 100dvh;
-  gap: 8px;
+
   font-family: 'Mouse Memoirs', sans-serif;
   font-size: 2rem;
   color: black;
+
   overflow: hidden;
 }
 
 .grid-container {
-  display: flex;
+  box-sizing: content-box;
+
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  box-sizing: content-box;
-  width: 800px;
-  max-width: 90vw;
-  height: 800px;
-  max-height: 90vw;
   gap: 0px;
-}
 
-.grid-item {
-  user-select: none;
-  box-shadow: 4px 4px 0px 0px black;
-  background-color: white;
-  border-radius: 6px;
-  border: 2px solid black;
+  width: min(800px, 90vw);
+  height: min(800px, 90vw);
 }
 
 .grid-input {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 5px;
   gap: 5px;
+
+  margin: 5px;
 }
 
 .slider-controls {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
   align-items: center;
+
+  width: 20rem;
 }
 
 .slider-display {
-  display: flex;
   align-items: flex-end;
   justify-content: space-around;
   gap: 8px;
+
   margin-bottom: 8px;
   width: 20rem;
 }
 
 .button-container {
-  display: flex;
   gap: 10px;
+}
+
+/* COMPONENTS */
+
+.grid-item {
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px 0px black;
+  background-color: white;
+
+  user-select: none;
 }
 
 button > * {
@@ -79,15 +98,17 @@ button > * {
 
 button,
 .toggle {
-  background: rgb(255, 255, 123);
-  border: 2px solid black;
-  border-radius: 6px;
-  height: 3rem;
-  width: 3rem;
-  box-shadow: 4px 4px 0px 0px black;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  background: rgb(255, 255, 123);
+  box-shadow: 4px 4px 0px 0px black;
+
   font-family: 'Mouse Memoirs', sans-serif;
   font-size: 1.5rem;
 }
@@ -96,11 +117,6 @@ button,
   background: none;
   border: none;
   appearance: none;
-}
-
-#color-input:hover {
-  background: none;
-  border: none;
 }
 
 #color-input::-webkit-color-swatch {
@@ -120,12 +136,19 @@ button,
     scale: 1.05;
     cursor: pointer;
   }
+
+  #color-input:hover {
+    background: none;
+    border: none;
+  }
 }
 
 .toggle {
   width: 8rem;
   box-sizing: border-box;
+
   color: black;
+
   user-select: none;
 }
 
@@ -134,17 +157,16 @@ button,
 }
 
 label.toggle {
-  display: flex;
-  width: 8rem;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
   gap: 5px;
+
+  width: 8rem;
+  padding: 10px;
 }
 
 .icon {
   width: 3rem;
   height: 3rem;
+
   font-size: 2rem;
 }
 
@@ -156,6 +178,18 @@ button:active,
 .toggle:active,
 a:active {
   scale: 1.1;
+}
+
+.signature {
+  margin-top: 1rem;
+
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.signature a {
+  text-decoration: none;
+  color: rgb(0, 13, 255);
 }
 
 @media (max-width: 426px) {
@@ -173,37 +207,3 @@ a:active {
     border: 1px solid black;
   }
 }
-
-.signature {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(0, 13, 255);
-}
-
-/* button#rainbow {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(255, 154, 0, 1) 10%,
-    rgba(208, 222, 33, 1) 20%,
-    rgba(79, 220, 74, 1) 30%,
-    rgba(63, 218, 216, 1) 40%,
-    rgba(47, 201, 226, 1) 50%,
-    rgba(28, 127, 238, 1) 60%,
-    rgba(95, 21, 242, 1) 70%,
-    rgba(186, 12, 248, 1) 80%,
-    rgba(251, 7, 217, 1) 90%,
-    rgba(255, 0, 0, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  width: 10rem;
-} */
