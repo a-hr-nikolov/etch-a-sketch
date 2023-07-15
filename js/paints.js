@@ -2,7 +2,7 @@
 // Since the functions are simple, I preferred to keep them all in one place.
 // Their names are descriptive enough to figure out what does what.
 
-import useTouch from './useTouch.js';
+import useTouch from './use-touch.js';
 
 function paintRainbow(event) {
   const rainbowColors = [
@@ -20,10 +20,6 @@ function paintRainbow(event) {
     'rgb(255, 0, 0)',
   ];
   const color = rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
-
-  // const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-  //   Math.random() * 256
-  // )}, ${Math.floor(Math.random() * 256)})`;
 
   // Handle mouse input
   if (event.buttons === 1) {
